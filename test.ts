@@ -1,0 +1,23 @@
+
+YFOLED.init(128, 64)
+YFOLED.writeStringNewLine("the quick brown fox jumped over the lazy dog?")
+YFOLED.writeStringNewLine("THE QUICK BROWN FOX JUMPED OVER THE LAZY DOG!")
+basic.pause(1000)
+YFOLED.clear()
+YFOLED.writeString("Your magic number is ")
+YFOLED.writeNum(23 * 3)
+YFOLED.writeStringNewLine("!")
+YFOLED.writeNumNewLine(1)
+basic.pause(100)
+YFOLED.writeNumNewLine(2)
+basic.pause(100)
+YFOLED.writeNumNewLine(3)
+basic.pause(1000)
+for (let i = 0; i < 100; i++) {
+    YFOLED.drawLoading(i)
+}
+basic.pause(1000)
+YFOLED.clear()
+YFOLED.drawRectangle(10, 10, 60, 60)
+YFOLED.drawLine(0, 0, 128, 64)
+YFOLED.drawLine(0, 64, 128, 0)

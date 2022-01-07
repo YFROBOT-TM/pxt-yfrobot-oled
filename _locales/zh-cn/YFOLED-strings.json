@@ -1,0 +1,14 @@
+{
+  "YFOLED.clear|block": "清除显示",
+  "YFOLED.drawLine|block": "画线条 起点:|x: %x0 y: %y0 终点| x: %x1 y: %y1",
+  "YFOLED.drawLoading|block": "显示进度条 %percent| %",
+  "YFOLED.drawRectangle|block": "绘制矩形 起点:|x: %x0 y: %y0 终点| x: %x1 y: %y1",
+  "YFOLED.init|block": "OLED初始化宽 %width 高 %height",
+  "YFOLED.newLine|block": "新行",
+  "YFOLED.writeNumNewLine|block": "显示数字 %n",
+  "YFOLED.writeNum|block": "新行显示数字 %n",
+  "YFOLED.writeStringNewLine|block": "新行显示字符串 %str",
+  "YFOLED.writeString|block": "显示字符串 %str",
+  "{id:category}Math": "Math",
+  "{id:category}YFOLED": "YFOLED"
+}

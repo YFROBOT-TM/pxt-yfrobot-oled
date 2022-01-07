@@ -1,0 +1,22 @@
+{
+    "name": "YFOLED",
+    "version": "0.0.5",
+    "description": "Yfrobot package for OLED controller",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "main.ts",
+        "_locales/zh-cn/YFOLED-strings.json",
+        "_locales/zh-cn/YFOLED-jsdoc-strings.json",
+        "_locales/zh-tw/YFOLED-strings.json",
+        "_locales/zh-tw/YFOLED-jsdoc-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "preferredEditor": "tsprj"
+}
