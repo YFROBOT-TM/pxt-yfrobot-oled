@@ -300,6 +300,55 @@ namespace YFOLED {
     //% inlineInputMode=inline
     export function drawLine(x0: number, y0: number, x1: number, y1: number) {
         let pixels: Array<Array<number>> = []
+        let kx: number, ky: number, c: number, i: number, dx: number, dy: number;
+
+        dx = Math.abs(x1 - x0);
+        dy = Math.abs(y1 - y0);
+        kx = x0 < x1 ? 1 : -1;
+        ky = y0 < y1 ? 1 : -1;
+
+        if (dx >= dy) {
+            c = dx;
+            for (i = 0; i < dx; i++, x0 += kx) {
+                pixels.push([x0, y0]);
+                c -= dy;
+                if (c <= 0) {
+                    y0 += ky;
+                    c += dx;
+                }
+                if (pixels.length > 20) {
+                    drawShape(pixels);
+                    pixels = [];
+                    drawLine(x0, y0, x1, y1);
+                    return;
+                }
+            }
+        } else {
+            c = dy;
+            for (i = 0; i < dy; i++, y0 += ky) {
+                pixels.push([x0, y0]);
+                c -= dx;
+                if (c <= 0) {
+                    x0 += kx;
+                    c += dy;
+                }
+                if (pixels.length > 20) {
+                    drawShape(pixels);
+                    pixels = [];
+                    drawLine(x0, y0, x1, y1);
+                    return;
+                }
+            }
+        }
+        drawShape(pixels);
+    }
+
+
+    //% blockId=YFOLED_drawLine2 weight=1 blockGap=10
+    //% block="draw line from:|x: %x0 y: %y0 to| x: %x1 y: %y1"
+    //% inlineInputMode=inline
+    export function drawLine2(x0: number, y0: number, x1: number, y1: number) {
+        let pixels: Array<Array<number>> = []
         let kx: number, ky: number, c: number, i: number, xx: number, yy: number, dx: number, dy: number;
         let targetX = x1
         let targetY = y1
